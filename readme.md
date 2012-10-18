@@ -2,6 +2,27 @@
 
 Based on avgrund by Hakim El Hattab, http://hakim.se
 
+**HOW TO USE:**
+    Requires jQuery and Modernizr.  
+
+    - JS
+        $('.modal').each(function () {
+            var modals = new Kunstmaan.Modal($(this));
+            modals.init();
+        });
+
+    - HTML
+        <!-- Link -->
+        <a class="modal" href="http://placekitten.com/1000/500" data-target="easy-to-use">
+            <img src="http://placehold.it/180x120" alt="" />
+        </a>
+
+        <!-- Modal box -->
+        <div id="easy-to-use" class="modal-box stack">
+            <img src="http://placekitten.com/1000/500" />
+        </div>
+
+
 **ISSUES:**
     
     -   Touchstart event on mobile devices:
@@ -14,6 +35,7 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
 
     -   Clean up code (internal code reviews?)
     -   Test mobile devices, IE
+    -   Make this work without Modernizr; the less dependencies, the better
     -   Add Jasmine + tests
 
 **IDEAS:**
@@ -22,6 +44,3 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
     -   Better configurability
     -   Documentation
     -   Navigating through modal windows? (left, right arrows)
-
-
-
