@@ -1,6 +1,6 @@
+/*global jQuery:false, $: false, Kunstmaan:false*/
 'use strict';
 
-/*global jQuery:false, $: false, Kunstmaan:false*/
 var KumaBundles = (function ($, window, undefined) {
 
     var init, initModal;
@@ -21,7 +21,6 @@ var KumaBundles = (function ($, window, undefined) {
     };
     
 }(jQuery, window));
-
 
 $(function () {
     KumaBundles.init();
