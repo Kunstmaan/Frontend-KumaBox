@@ -22,9 +22,9 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
             <img src="http://placekitten.com/1000/500" />
         </div>
 
-
 **ISSUES:**
     
+    -   Extremely annoying flickering on mobile devices
     -   Touchstart event on mobile devices:
         -   Prevents the user from scrolling
         -   Implement a close button instead
