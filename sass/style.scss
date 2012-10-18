@@ -1,0 +1,164 @@
+/* =============================================================================
+  MAIN VARS
+  ========================================================================== */
+
+//////// Main Vars ////////
+// Folders
+$btns: "../img/btns";
+$css-bg: "../img/css-bg";
+$dummy: "../img/dummy";
+$general: "../img/general";
+$icons: "../img/icons";
+
+// Text
+$arial: Arial, Helvetica, sans-serif;
+$verd: Verdana, Geneva, sans-serif;
+$geor: Georgia, 'Times New Roman', Times, serif;
+$times: 'Times New Roman', Times, serif;
+$helv: HelveticaNeue, Helvetica, Arial, sans-serif;
+$proxima: 'Proxima N W15 Reg', Helvetica, Arial, sans-serif;
+$proxima_bold: 'Proxima N W15 Bold', Helvetica, Arial, sans-serif;
+
+
+
+
+
+/* =============================================================================
+  PROJECT SETUP
+  ========================================================================== */
+
+//////// Colors ////////
+
+//Main color
+$main-color: #333;
+$main-select-color: #FFF;
+$main-select-bg: #999;
+
+//Links
+$link-color: #333;
+$link-hover-color: #333;
+
+//Basics
+$hr-color: #CCC;
+
+//Colors
+$dark-blue: #2F3446;
+
+
+//////// General Setup ////////
+
+//URL
+$site-url: "www.google.be";
+
+//Typo
+$basic-fontsize: 100%; //16px
+$main-font: $proxima;
+
+//Body 
+$main-background: #EFF2F7;
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+  MIXINS
+  ========================================================================== */
+
+@import "mixins";
+
+
+
+
+/* =============================================================================
+  NORMALIZER
+  ========================================================================== */
+
+@import "normalizer";
+
+
+/* =============================================================================
+  PLUGINS
+  ========================================================================== */
+
+@import "kumabox";
+
+
+
+/* =============================================================================
+  MAIN STYLES
+  ========================================================================== */
+
+@import "main";
+
+
+
+
+
+/* =============================================================================
+  MEDIAQUERYS
+  ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+	@import "480";
+}
+
+@media only screen and (min-width: 900px) {
+	@import "900";
+}
+
+@media only screen and (min-width: 1024px) {
+	@import "1024";
+}
+
+@media only screen and (min-width: 1400px) {
+    @import "1200";
+}
+
+@media only screen and (min-width: 2000px) {
+    body{
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        border-top: 5px solid #2997CE;
+        
+    }
+    
+    html{
+        background: #DFE7EB;
+        border: none;
+    }
+}
+
+
+
+
+/* =============================================================================
+  FALLBACKS
+  ========================================================================== */
+
+@import "fallbacks";
+
+
+
+
+
+/* =============================================================================
+  DEBUG
+  ========================================================================== */
+
+@import "debug";
+
+
+
+
+
+/* =============================================================================
+  PRINT STYLE
+  ========================================================================== */
+
+@import "print";

@@ -1,0 +1,178 @@
+/* =============================================================================
+  GENERAL
+  ========================================================================== */
+
+  .hidden_phone{
+   display: none;
+}
+
+a{
+    @include single-transition(color, .3s, ease-in-out);
+}
+
+.main_wrp{
+    padding: .9em .5em;
+    max-width: 2000px;
+    border-top: 1px solid #FFF;
+    border-top: 5px solid #2997CE;
+}
+
+strong{
+    font-family: $proxima_bold;
+    font-weight: normal;
+}
+
+/* =============================================================================
+  HEADER
+  ========================================================================== */
+
+  header{
+    text-shadow: 0 1px 1px #FFF;
+    overflow: hidden;
+    h1{
+        font-family: $helv;
+        font-size: 2em;
+        line-height: 140%;
+        width: 100%;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    small{
+        font-size: .5em;
+        display: block;
+        line-height: 110%;
+        font-weight: 300;
+    }
+}
+
+.main_nav{
+    float: left;
+    font-size: .9em;
+    padding-top: 1.35em;
+    li{
+        float: left;
+        border: 1px solid #95A8B8;
+        margin: 0 1em .7em 0;
+        color: #595F69;
+        border-radius: 15px;
+    }
+    a{
+        display: block;
+        padding: .55em 1em .3em;
+        color: inherit;
+        &:hover{
+            color: #111;
+        }
+    }
+    .cta{
+        background: #2997CE;
+        border-radius: 15px;
+        color: #FFF;
+        text-shadow: none;
+        @include single-transition(background, .3s, ease-in-out);
+        &:hover{
+            color: #FFF;
+            background: #2686B6;
+        }
+    }
+}
+
+
+
+/* =============================================================================
+  MAIN SLIDER
+  ========================================================================== */
+
+  .mainslider_wrp{
+    margin-top: 1.4em;
+}
+
+.mainslider, .mainslider_info{
+
+}
+
+.mainslider_info{
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    padding: 1.3em 1em 1em;
+    line-height: 150%;
+    background: -webkit-linear-gradient(top, $main-background, rgba(255, 255, 255, 0));
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, .1);
+    color: #595F69;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+
+/* =============================================================================
+  CONTENT
+  ========================================================================== */
+  
+  section{
+    color: #595F69;
+    margin: 3.35em 0 5.3em;
+    padding: 0 1em;
+    text-shadow: 0 1px 1px #FFF;
+}
+
+h2{
+    font-size: 1.8em;
+    line-height: 120%;
+    font-family: $helv;
+}
+
+.terminal{
+    display: block;
+    background: #333;
+    color: #FFF;
+    padding: 1em 1.5em;
+    line-height: 150%;
+    margin: 2em 0;
+    text-shadow: 0 1px 1px #000;
+    border: 1px solid #FFF;
+    font-size: 1em;
+    code{
+        font-family: $proxima;
+        font-size: 1em;
+    }
+}
+
+.art_wrp{
+    overflow: hidden;
+}
+
+.grad_content_box{
+    margin: 1.5em 0 0;
+    padding: .9em 0 .9em;
+    overflow: hidden;
+    height: 100%;
+    h3{
+        margin-bottom: .5em;
+        line-height: 130%;
+        color: #111;
+        font-weight: normal;
+    }
+    p{
+
+        word-wrap: break-word;
+    }
+}
+
+
+/* =============================================================================
+  FOOTER
+  ========================================================================== */
+
+  footer{
+    overflow: hidden;
+    padding: 0 2em;
+    img{
+        float: right;
+        opacity: .3;
+    }
+}
