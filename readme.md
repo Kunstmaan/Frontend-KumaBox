@@ -13,6 +13,7 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
  **TODO:**
 
     -   Clean up code (internal code reviews?)
+    -   Test mobile devices, IE
     -   Add Jasmine + tests
 
 **IDEAS:**
@@ -23,4 +24,4 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
     -   Navigating through modal windows? (left, right arrows)
 
 
-    
+
