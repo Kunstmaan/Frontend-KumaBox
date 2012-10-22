@@ -1,9 +1,9 @@
 /*global document: false, jQuery: false, window: false, Modernizr:false */
 /*!
- * KumaBox 0.1
- *
- * Based on avgrund by Hakim El Hattab, http://hakim.se
- */
+* KumaBox 0.1
+*
+* Based on avgrund by Hakim El Hattab, http://hakim.se
+*/
 
 (function ($, window, undefined) {
 
@@ -16,7 +16,7 @@
         this.$el = $(el);
         this.boxId = null;
         this.$box = null;
-      
+
         this.init();
         
     };
@@ -27,21 +27,24 @@
             $(document.documentElement).addClass('modal-ready');
 
             this.boxId = this.$el.data('target');
-            this.$box = $('#' + this.boxId);
+
             
+            this.$box = $('#' + this.boxId);
+
             if (this.$box.find('img').length > 0) {
                 this.$box.find('img').load(function () {
-                    self.boxHeight = self.$box.height();
-                    self.boxWidth =  self.$box.width();
-                    self.positionBox();
+                    self.setBoxSize(function () {
+                        self.positionBox();
+                    });
                 });
             } else {
-                self.boxHeight = self.$box.height();
-                self.boxWidth =  self.$box.width();
-                self.positionBox();
+                self.setBoxSize(function () {
+                    self.positionBox();
+                });
             }
-            
+
             this.bindEvents();
+            
         },
 
         bindEvents: function () {
@@ -49,7 +52,9 @@
 
             this.$el.on('click', function (e) {
                 e.preventDefault();
-                self.activate();
+                if(self.boxId) {
+                    self.activate();
+                }                
             });
 
             $(window).scroll(function () {
@@ -77,13 +82,21 @@
             this.bindDocumentEvents();
         },
 
+        setBoxSize: function (callback) {
+            var self = this;
+            self.boxHeight = self.$box.height();
+            self.boxWidth =  self.$box.width();
+
+            callback();
+        },
+
         positionBox: function () {
             // Messy
             
             var h = this.boxHeight,
-                w = this.boxWidth,
-                marginLeft = - w / 2,
-                marginTop = - h / 2;
+            w = this.boxWidth,
+            marginLeft = - w / 2,
+            marginTop = - h / 2;
 
             if (Modernizr.mq('only screen and (max-width: 1100px)')) {
                 w = window.innerWidth * 0.8;
