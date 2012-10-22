@@ -10,10 +10,7 @@ var KumaBundles = (function ($, window, undefined) {
     };
         
     initModal = function () {
-        $('.modal').each(function () {
-            var modal = new Kunstmaan.Modal($(this));
-            modal.init();
-        });
+        $('.modal').kumaBox();
     };
     
     return {

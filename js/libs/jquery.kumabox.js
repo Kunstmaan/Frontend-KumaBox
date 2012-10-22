@@ -1,6 +1,6 @@
 /*global document: false, jQuery: false, window: false, Modernizr:false */
 /*!
- * Kumabox 0.1
+ * KumaBox 0.1
  *
  * Based on avgrund by Hakim El Hattab, http://hakim.se
  */
@@ -12,15 +12,20 @@
     var Kunstmaan = window.Kunstmaan || {};
 
     Kunstmaan.Modal = function (el) {
-        this.$el = el;
+
+        this.$el = $(el);
         this.boxId = null;
         this.$box = null;
+      
+        this.init();
+        
     };
 
     $.extend(Kunstmaan.Modal.prototype, {
         init: function () {
             var self = this;
             $(document.documentElement).addClass('modal-ready');
+
             this.boxId = this.$el.data('target');
             this.$box = $('#' + this.boxId);
             
@@ -130,6 +135,10 @@
         }
     });
 
-    window.Kunstmaan = Kunstmaan;
+    $.fn.kumaBox = function () {
+        return this.each(function () {
+            new Kunstmaan.Modal(this);
+        });
+    };
 
 })(jQuery, window);
