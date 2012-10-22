@@ -6,10 +6,7 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
     Requires jQuery and Modernizr.  
 
     - JS
-        $('.modal').each(function () {
-            var modals = new Kunstmaan.Modal($(this));
-            modals.init();
-        });
+        $('.modal').kumaBox();
 
     - HTML
         <!-- Link -->
