@@ -27,8 +27,6 @@
             $(document.documentElement).addClass('modal-ready');
 
             this.boxId = this.$el.data('target');
-
-            
             this.$box = $('#' + this.boxId);
 
             if (this.$box.find('img').length > 0) {
@@ -44,7 +42,6 @@
             }
 
             this.bindEvents();
-            
         },
 
         bindEvents: function () {
@@ -52,9 +49,9 @@
 
             this.$el.on('click', function (e) {
                 e.preventDefault();
-                if(self.boxId) {
+                if (self.boxId) {
                     self.activate();
-                }                
+                }
             });
 
             $(window).scroll(function () {
@@ -127,19 +124,16 @@
             $(document).on('click', $.proxy(this.onDocumentClick, this));
             $(document).on('touchstart', $.proxy(this.onDocumentClick, this));
         },
-
         unbindDocumentEvents: function () {
             $(document).off('keyup');
             $(document).off('click');
             $(document).off('touchstart');
         },
-
         onDocumentKeyUp: function (e) {
             if (e.keyCode === 27) {
                 this.deactivate();
             }
         },
-
         onDocumentClick: function (e) {
             if ($(e.target).hasClass('modal-cover')) {
                 this.deactivate();
