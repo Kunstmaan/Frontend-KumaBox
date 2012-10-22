@@ -47,7 +47,7 @@
     top: 50%;
     left: 50%;
     z-index: 99;
-    display: none;
+    visibility: hidden;
     opacity: 0;
     border-radius: 3px;
     box-shadow: 0px 0px 20px rgba( 0, 0, 0, .6 );
@@ -64,7 +64,7 @@
     	        transform: scale( 1.5 );
     }
     &.active {
-        display: block;
+        visibility: visible;
         opacity: 1;
         -webkit-transform: scale( 1.1 );
            -moz-transform: scale( 1.1 );
