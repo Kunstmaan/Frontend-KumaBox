@@ -62,7 +62,6 @@
         },
 
         activate: function () {
-            // modal cover
             $('<div>').attr('class', 'modal-cover').appendTo('body');
             this.$cover = $('.modal-cover');
 

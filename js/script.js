@@ -1,4 +1,4 @@
-/*global jQuery:false, $: false, Kunstmaan:false*/
+/*global jQuery:false, $: false*/
 'use strict';
 
 var KumaBundles = (function ($, window, undefined) {
