@@ -1,4 +1,4 @@
-/*global document: false, jQuery: false, window: false, Modernizr:false */
+/*global document: true, jQuery: true, window: true, Modernizr:true */
 /*!
 * KumaBox 0.1
 *
@@ -124,16 +124,19 @@
             $(document).on('click', $.proxy(this.onDocumentClick, this));
             $(document).on('touchstart', $.proxy(this.onDocumentClick, this));
         },
+
         unbindDocumentEvents: function () {
             $(document).off('keyup');
             $(document).off('click');
             $(document).off('touchstart');
         },
+
         onDocumentKeyUp: function (e) {
             if (e.keyCode === 27) {
                 this.deactivate();
             }
         },
+
         onDocumentClick: function (e) {
             if ($(e.target).hasClass('modal-cover')) {
                 this.deactivate();
