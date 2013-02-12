@@ -60,6 +60,7 @@
 
             $(window).resize(function () {
                 self.positionBox();
+                self.$box.css('top', $(window).scrollTop() + window.innerHeight / 2);
             });
         },
 

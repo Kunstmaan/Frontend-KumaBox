@@ -25,7 +25,6 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
     -   Touchstart event on mobile devices:
         -   Prevents the user from scrolling
         -   Implement a close button instead
-    -   Vertical box position when resizing from largest to smallest layout
     -   We need to use visibility instead of display in our css to make the fadeOut animation work.
         However, when using visibility: hidden, the elements still take up space, which ruins
         our layout. // @ibe
