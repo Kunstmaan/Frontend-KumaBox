@@ -26,7 +26,6 @@ Based on avgrund by Hakim El Hattab, http://hakim.se
         -   Prevents the user from scrolling
         -   Implement a close button instead
     -   Vertical box position when resizing from largest to smallest layout
-    -   Box doesn't scale with the image (box-shadow ugliness) // @ibe
     -   We need to use visibility instead of display in our css to make the fadeOut animation work.
         However, when using visibility: hidden, the elements still take up space, which ruins
         our layout. // @ibe

@@ -46,6 +46,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: auto;
+    max-width: 100%;
     z-index: 99;
     display: none; // debug
     // visibility: hidden;

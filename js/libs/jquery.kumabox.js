@@ -97,13 +97,12 @@
 
             if (Modernizr.mq('only screen and (max-width: 1100px)')) {
                 w = window.innerWidth * 0.8;
-                marginLeft = - window.innerWidth * 0.8 / 2;
+                marginLeft = - this.$box.width() / 2;
                 this.$box.find('img').css('max-width', '100%');
             }
             
             this.$box.css({
-                height: 'auto',
-                width:  w,
+                'max-width' :  w,
                 marginTop: marginTop,
                 marginLeft: marginLeft
             });
