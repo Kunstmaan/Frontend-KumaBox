@@ -8,15 +8,14 @@ var KumaBundles = (function ($, window, undefined) {
     init = function () {
         initModal();
     };
-        
+
     initModal = function () {
         $('.modal').kumaBox();
     };
-    
+
     return {
         init: init
     };
-    
 }(jQuery, window));
 
 $(function () {
