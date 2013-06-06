@@ -16,6 +16,7 @@ var KumaBundles = (function ($, window, undefined) {
     return {
         init: init
     };
+
 }(jQuery, window));
 
 $(function () {
